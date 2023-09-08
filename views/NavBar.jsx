@@ -12,6 +12,7 @@ module.exports = function NavBar({ user }) {
             className='nav__logo_img'
           />
         </div>
+        {user && <p className='nav__menu_user'>Hello, {user.login}!</p>}
         {user ? (
           <ul className='nav__menu'>
             <li className='nav__menu_item active'>
@@ -21,18 +22,14 @@ module.exports = function NavBar({ user }) {
             </li>
 
             <li className='nav__menu_item'>
-              <a className='nav__menu_link' href='/login'>
-                Login
-              </a>
-            </li>
-            <li className='nav__menu_item'>
-              <a className='nav__menu_link' href='/logout'>
-                Logout
-              </a>
-            </li>
-            <li className='nav__menu_item' id='logout'>
               <a className='nav__menu_link' href='/cart'>
                 Cart
+              </a>
+            </li>
+
+            <li className='nav__menu_item' id='logout'>
+              <a className='nav__menu_link' href='/user/logout'>
+                Logout
               </a>
             </li>
           </ul>

@@ -11,6 +11,7 @@ const ssr = require('./src/middleware/ssr');
 // импорт Роутов
 const indexRouter = require('./src/routes/indexRouter');
 const userRouter = require('./src/routes/userRouter');
+const cartRouter = require('./src/routes/cartRouter');
 
 // server
 const app = express();
@@ -40,6 +41,7 @@ app.use(ssr);
 // Ссылки на Router
 app.use('/', indexRouter);
 app.use('/user', userRouter);
+app.use('/cart', cartRouter);
 
 app.listen(PORT, () => {
   console.log(`Server started on PORT: ${PORT}`);

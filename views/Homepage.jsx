@@ -6,7 +6,7 @@ module.exports = function Homepage({ products, user }) {
   console.log('userHomepage', user);
   return (
     <Layout user={user}>
-      <div className='container'>Homepage</div>
+      {!user && <div className='nouser__title'>To buy products you must be registered!</div>}
       <div className='container'>
         <div className='cards'>
           {products &&

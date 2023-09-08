@@ -1,6 +1,5 @@
 const React = require('react');
 const NavBar = require('./NavBar');
-const Footer = require('./Footer');
 
 module.exports = function Layout({ children, user }) {
   console.log('userLayout', user);
@@ -16,6 +15,8 @@ module.exports = function Layout({ children, user }) {
           href='https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap'
           rel='stylesheet'
         />
+        <script defer src='/js/userfront.js' />
+        <script defer src='/js/cart.js' />
         <title>myapishop</title>
       </head>
       <body>
@@ -25,9 +26,6 @@ module.exports = function Layout({ children, user }) {
         <main>
           <div>{children}</div>
         </main>
-        <footer>
-          <Footer />
-        </footer>
       </body>
     </html>
   );
